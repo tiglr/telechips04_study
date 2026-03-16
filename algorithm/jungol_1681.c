@@ -17,6 +17,7 @@ void solve(int pos, int depth, int sum)
     if (sum >= result) return;
 
     if (depth == N) {
+        //마지막 도시에서 회사로 가는 길이 있을때만 반영
         if (cost[pos][0] != 0) {
             int total = sum + cost[pos][0];
             if (total < result)
